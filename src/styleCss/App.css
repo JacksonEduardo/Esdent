@@ -1,0 +1,449 @@
+
+/* START GENERAL SET */
+*{
+  font-family: var(--general-font);
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5{
+  margin: 0;
+}
+:root{
+  --general-font: 'Montserrat', sans-serif;
+  --color-main:rgb(14,103,107);    
+  --secondary-color: rgb(14, 93, 100);
+  --extra-color:  rgb(252,105,63);
+  --button-color:rgb(28,201,182)
+  --color-animation: linear-gradient(90deg, rgba(127,255,212,0.5186449579831933) 0%, rgba(14,103,107,1) 100%);
+  }  
+/* Stile regolare (400) */
+.regular-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Stile bold italic (700) */
+.fw-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* END GENERAL SET */
+
+/* START GENERAL CLASS */
+.logo{
+  width:120px;
+}
+/* END GENERAL CLASS */
+
+/* START MAIN SECTION COMPONENTS CONTENUTO */
+.container {
+  background-color:white;
+  position: relative;
+}
+
+.container-img{
+  width: 100%;
+  height: 90vh;
+  background-image: url(../media/welcome2.jpg);
+  background-size: cover;
+  background-position:center;
+  position: fixed;
+  position: relative;
+  overflow: hidden;
+  -webkit-clip-path: polygon(100% 0, 100% 90%, 48% 100%, 0 90%, 0 0);
+  clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);  
+}
+
+.container-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 94, 101, 0.873);
+}
+
+.title{
+  position: absolute;
+  left: 15%;
+  top: 20%;
+}
+.title p:first-child {
+  font-size: 1.5em;
+  color: var(--extra-color);
+}
+.title h1{
+  font-size: 5em;
+  color: aliceblue;
+}
+.title h2{
+  font-size: 1.5em;
+  color: aliceblue;
+
+}
+.title p{
+  font-size: 1em;
+  margin-top: 1em;
+  color: aliceblue;
+}
+
+h2 span{
+  text-decoration: underline;
+}
+
+
+/* this welcome img have an ralation with position relative of .container-img */
+.welcome-img{
+  width: 400px;
+  height: 350px;
+  background-image: url(../media/hellen.jpg);
+  border-radius: 50px 15px 30px 35px;
+  background-size: cover;
+  transform: rotateY(180deg);
+  position: absolute;
+  right: 20%;
+  top: 25%;
+  -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
+  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
+}
+.welcome-img::before{
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  display: flex;
+  top: 5%;
+  left: 5%;
+  background-color: rgba(14, 104, 105, 0.227); 
+  z-index: -1;
+  border-radius: 50px 15px 30px 35px;
+  -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
+  clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
+}
+/* .name-doctor{
+  width: 10em;
+  height: fit-content;
+  background-color: rgb(247, 243, 237);
+  position: absolute;
+  right:20%;
+  bottom: 40%;
+  border-radius: 3px 3px 3px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s linear;
+} */
+.name-doctor:hover{
+  box-shadow: 0px 3px 2px var(--extra-color);
+  transition-duration: 0.1s;
+}
+
+.name-doctor-contenuto{
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.welcome-button{
+  width: 10em;
+  height: 3em;
+  font-size: 0.8em;
+  background-color: var(--button-color);
+  color: aliceblue;
+  margin-top: 3em;
+  border-radius: 5px 5px 5px 5px;
+  border: unset;
+  transition: 0.2s linear;
+}
+
+.welcome-button:hover {
+  width: 11em;
+  height: 4em;
+  font-size: 0.9em;
+  transition-duration: 0.2s;
+  transform-origin: center;
+transform: scale(1.1) translate(-5%, -5%);
+}
+ 
+/* ------START MEDIA QUERY CONTENUTO COMPONENTS */
+@media screen and (max-width: 1060px)  {
+
+.container-img{
+  height: 100vh;
+  position: relative;
+}
+
+.title{
+  width: 80%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title :nth-child(4){
+  font-size: 1em;
+}
+.title p{
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.title h2{
+  margin: 4% 0 4% 0;
+}
+
+.welcome-img{
+  left: calc(100% / 2 );
+  top: 30% ;
+  position: relative;
+}
+
+/* .name-doctor{
+top: 90%;
+left: 50%;
+} */
+} 
+@media screen and (max-width: 1000px) {
+  .welcome-img{
+    width: 250px;
+    height: 250px;
+    left: 55%;
+    background-color: aqua;
+  }
+  /* .name-doctor{
+    display:block;
+    top: 65%;
+    left: 65%;
+    } */
+}
+
+@media screen and (max-width: 625px){
+  .welcome-img{
+    width: 250px;
+    height: 200px;
+    top: 55%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+  /* .name-doctor{
+    display:block;
+    top: 80%;
+    left: 40%;
+    } */
+  .name-doctor-contenuto{
+    font-weight: bold;
+    font-size: 0.6em;
+  }
+  .welcome-button{
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  }
+
+/* ------END MEDIA QUERY CONTENUTO COMPONENTS */
+/* END MAIN SECTION COMPONENTS CONTENUTO */
+
+
+/* START SECTION IN INFOSECTION */
+.container-info{
+  display: flex;
+  justify-content: center; 
+  position: relative;
+}
+.icon{
+  width: 40px;
+  height: 50px;
+  color: var(--button-color);
+  position: absolute;
+  top: -15px
+}
+
+.title-section{
+  width: 100%;
+  margin-top: 10%;
+  padding-left: 10%;
+}
+.title-section h3{
+  color: var(--extra-color);
+  font-size: 1.5em;
+}
+.title-section h2 {
+  margin:1% 0% 3% 0%;
+  font-size: 2.5em;
+}
+
+.sentence {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.info{
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+    /* LEFT  */
+.info-left{
+  width: fit-content;
+  height: 500px;
+  /* background-color: coral; */
+}
+    /* RIGHT */
+.info-right{
+  width: fit-content;
+  height: 350px;
+  /* background-color: cornflowerblue; */
+  margin-left:2%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+} 
+.inside-info{
+  display: flex;
+}
+.inside-left{
+  width:250px;
+  display: flex;
+  align-items: center;
+  /* background-color: bisque; */
+  margin: 2%;
+}
+
+.inside-left p{
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 7rem;
+} 
+.inside-left h2{
+  font-size: 1.5em;
+  text-align: center;
+}
+.inside-left h5{
+margin-top:10%;
+font-size: 0.8em;
+text-align: center;
+}
+
+
+.inside-right {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border-radius: 40px 0px 40px 0px;
+  overflow: hidden;
+}
+
+.inside-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 255, 0),
+    rgba(14, 93, 100, 1) 130%
+  );
+  z-index: 1;
+}
+
+.inside-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.info-right p:nth-of-type(2) {
+ color: var(--secondary-color);
+}
+
+#tooth-animation-container{
+  width: 180Px;
+  height: 180px;
+}
+
+.button-info-section{
+  border: none;
+  background-color: antiquewhite;
+}
+
+/* ----------START MEDIA QUERY INFOSECTION */
+@media screen and (max-width: 1000px){
+
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-right{
+  margin-left:0;
+  
+} 
+
+.title-section{
+  padding: 0;
+  text-align: center;
+}
+.title-section h2 {
+  font-size: 2em;
+}
+
+.info-left{
+  height: fit-content;
+}
+}
+/* ---START NEW MEDIA QUERY INFOSECTION */
+@media screen and (max-width: 625px){
+.inside-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ div p {
+  padding-left: 3%;
+  padding-right: 3%;
+text-align: center;
+ }
+ /* .title-section h2 {
+  font-size: 1.2em;
+} */
+.inside-left{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  
+}
+.inside-right{
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  justify-content: center;
+}
+.esdent-small{
+  font-size: 50px !important;
+  text-align: center;
+}
+.title-small{
+  font-size: 20px !important;
+}
+.subtitle-small{
+  font-size: 20px !important;
+  text-align: center;
+}
+.title-section h2 {
+  font-size: 1em;
+}
+.title-section h3{
+  font-size: 1em;
+}
+}
+/* ----------END MEDIA QUERY INFOSECTION */
+/* END SECTION IN INFOSECTION */
+

@@ -1,0 +1,149 @@
+/* ----this is the css file of map.js and mappavera.js */
+/* START GENERAL SET */
+*{
+    font-family: var(--general-font);
+    box-sizing: border-box;
+  }
+  p, h1, h2, h3, h4, h5{
+    margin: 0;
+  }
+  :root{
+    --general-font: 'Montserrat', sans-serif;
+    --color-main:rgb(14,103,107);    
+    --secondary-color: rgb(14, 93, 100);
+    --extra-color:  rgb(252,105,63);
+    --button-color:rgb(28,201,182)
+  } 
+  /* Stile regolare (400) */
+  .regular-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Stile bold italic (700) */
+  .fw-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  /* END GENERAL SET */
+.map-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(600px, auto));
+    grid-auto-rows: 400px;
+    gap: 10px;
+    margin-bottom: 5%;
+    background: linear-gradient(to top, rgba(14, 103, 105, 0.8), rgba(14, 103, 105, 0.8)), url(../media//leaves.jpg);
+    background-position: center;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    justify-content:space-around;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.map-container::before{
+    content: "";
+    width: 97%;
+    height: 10%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-main);
+    z-index: -1;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+@media screen and (width <= 1220px){
+  .map-container{
+    grid-template-columns: repeat(auto-fill, minmax(400px, 490px));
+    gap: 20px;
+
+  }  
+}
+.map-left{
+    background-color: rgba(14, 103, 105, 0.6); 
+}
+.map-right {
+    background-color: rgba(14, 103, 105, 0.6); 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 400px; 
+  } 
+
+  
+.map-title-left {
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 150px;
+}
+.map-title-left ul, h6{
+    margin: 1%;
+}
+
+.map-square-grid{
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-auto-rows: 50px;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.square{
+
+    padding: 2%;
+    margin: 0;
+    border-radius: 5px;
+    background: #0e5d64;
+    box-shadow:  2px 2px 3px #0c4f55,
+                 -2px -2px 3px #106b73;
+}
+.square h5{
+    margin: 0;
+}
+.square div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.leaflet-container {
+    height: 95%;
+    width: 95%;
+  }
+
+@media screen and (max-width: 625px){
+    .map-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(370px, auto));
+        /* grid-auto-rows: 400px; */
+    } 
+    .map-square-grid{
+     grid-template-columns: repeat(2, 150px);
+    }
+    .map-title-left p{
+        padding: 0;
+    }
+    .map-title-left{
+        margin: 5% 2% 0% 2%;
+    }
+    .map-info-sentence{
+      font-size: 0.6em;
+    }
+}
+
+/* THIS MEDIA QUERY IS IN FUNCTION ONLY WITH FOUR SQAURE INSIDE */
+@media screen and (width <= 380px){
+    .map-square-grid{
+        grid-template-columns: repeat(1, 250px);
+    }
+    .map-container{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 490px));
+        gap: 20px;
+    
+      }  
+}
