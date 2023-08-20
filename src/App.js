@@ -3,14 +3,14 @@ import "./styleCss/advice.css";
 import "./styleCss/footer.css";
 import "./styleCss/map.css";
 import "./styleCss/navbar.css";
-import { Navbar, Footer, Body, NavbarToggler } from "./components";
+import { Footer, Body, NavbarToggler } from "./components";
 
 function App() {
   return (
     <>
       {/* <Navbar /> */}
-      {/* <NavbarToggler /> */}
-      {/* <Body /> */}
+      <NavbarToggler />
+      <Body />
       <Footer />
     </>
   );

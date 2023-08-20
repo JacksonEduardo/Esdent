@@ -120,7 +120,7 @@
     .map-container{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(370px, auto));
-        /* grid-auto-rows: 400px; */
+        
     } 
     .map-square-grid{
      grid-template-columns: repeat(2, 150px);

@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { Icon, divIcon, markerClusterGroup } from "leaflet";
+import { Icon } from "leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 
 const Mappavera = () => {

@@ -54,7 +54,6 @@ background-color: var();
 .grid-el{
     width: 80%;
     height: 100%;
-    /* background-color: rgb(21, 103, 171); */
 }
 .number-advice{
     background-color: rgba(0, 0, 0, 0.448);
@@ -69,7 +68,6 @@ background-color: var();
 }
 .advice-info{
     width: 100%;
-    /* height: calc(300px - 65px); */
     display: flex;
     flex-direction: column;
     align-items: center;

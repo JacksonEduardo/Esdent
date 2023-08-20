@@ -1,4 +1,3 @@
-import Navbar from "./navbar";
 import Footer from "./footer";
 import Contenuto from "./contenuto";
 import Body from "./body";
@@ -9,7 +8,6 @@ import NavbarToggler from "./navbarToggler";
 import Reveal from "./reveal";
 
 export {
-  Navbar,
   Footer,
   Contenuto,
   Body,

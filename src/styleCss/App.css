@@ -12,8 +12,8 @@ p, h1, h2, h3, h4, h5{
   --color-main:rgb(14,103,107);    
   --secondary-color: rgb(14, 93, 100);
   --extra-color:  rgb(252,105,63);
-  --button-color:rgb(28,201,182)
-  --color-animation: linear-gradient(90deg, rgba(127,255,212,0.5186449579831933) 0%, rgba(14,103,107,1) 100%);
+  --button-color:rgb(28,201,182);
+  --color-animation: linear-gradient(90deg, rgba(127,255,212,0.5) 0% rgba(14,103,107,1) 100%);
   }  
 /* Stile regolare (400) */
 .regular-font {
@@ -63,7 +63,7 @@ p, h1, h2, h3, h4, h5{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(22, 94, 101, 0.873);
+  background-color: rgba(22, 94, 101, 0.722);
 }
 
 .title{
@@ -89,11 +89,15 @@ p, h1, h2, h3, h4, h5{
   margin-top: 1em;
   color: aliceblue;
 }
+.orari{
+  font-size: 1em;
+  margin-top: 1em;
+  color: aliceblue;
+}
 
 h2 span{
   text-decoration: underline;
 }
-
 
 /* this welcome img have an ralation with position relative of .container-img */
 .welcome-img{
@@ -123,20 +127,7 @@ h2 span{
   -webkit-clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
   clip-path: polygon(0 16%, 100% 0, 100% 100%, 0 92%);
 }
-/* .name-doctor{
-  width: 10em;
-  height: fit-content;
-  background-color: rgb(247, 243, 237);
-  position: absolute;
-  right:20%;
-  bottom: 40%;
-  border-radius: 3px 3px 3px 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s linear;
-} */
+
 .name-doctor:hover{
   box-shadow: 0px 3px 2px var(--extra-color);
   transition-duration: 0.1s;
@@ -151,7 +142,7 @@ h2 span{
   width: 10em;
   height: 3em;
   font-size: 0.8em;
-  background-color: var(--button-color);
+  background-color: var(--extra-color);
   color: aliceblue;
   margin-top: 3em;
   border-radius: 5px 5px 5px 5px;
@@ -190,6 +181,10 @@ transform: scale(1.1) translate(-5%, -5%);
   font-size: 1.5em;
   margin: 0;
 }
+.orari{
+  font-size: 1.5em;
+  margin: 0;
+}
 
 .title h2{
   margin: 4% 0 4% 0;
@@ -200,11 +195,6 @@ transform: scale(1.1) translate(-5%, -5%);
   top: 30% ;
   position: relative;
 }
-
-/* .name-doctor{
-top: 90%;
-left: 50%;
-} */
 } 
 @media screen and (max-width: 1000px) {
   .welcome-img{
@@ -213,11 +203,6 @@ left: 50%;
     left: 55%;
     background-color: aqua;
   }
-  /* .name-doctor{
-    display:block;
-    top: 65%;
-    left: 65%;
-    } */
 }
 
 @media screen and (max-width: 625px){
@@ -228,11 +213,7 @@ left: 50%;
     right: 50%;
     transform: translateX(-50%);
   }
-  /* .name-doctor{
-    display:block;
-    top: 80%;
-    left: 40%;
-    } */
+  
   .name-doctor-contenuto{
     font-weight: bold;
     font-size: 0.6em;
@@ -240,6 +221,9 @@ left: 50%;
   .welcome-button{
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+  .orari{
+    text-align: center;
   }
   }
 
@@ -289,7 +273,6 @@ left: 50%;
 .info-left{
   width: fit-content;
   height: 500px;
-  /* background-color: coral; */
 }
     /* RIGHT */
 .info-right{
@@ -411,9 +394,6 @@ text-align: center;
   padding-right: 3%;
 text-align: center;
  }
- /* .title-section h2 {
-  font-size: 1.2em;
-} */
 .inside-left{
   margin: 0;
   display: flex;

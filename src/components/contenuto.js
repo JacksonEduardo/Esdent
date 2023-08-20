@@ -11,20 +11,20 @@ const Contenuto = () => {
         <div className="container">
           <div className="container-img">
             <div className="title">
-              <p className="title-small">Cura, todos los dias con</p>
+              <p className="title-small">Cura todos los dias con</p>
               <Reveal>
                 <h1 className="esdent-small">Esdent</h1>
               </Reveal>
               <h2 className="subtitle-small">
                 Consultorio <span>Dental</span>
               </h2>
-              <p>
+              <div className="orari">
                 <Reveal>
                   Horarios: <br />
                   lunes-viernes: 8-12 / 13-18 <br />
                   Sabados y Domingos: 8-12
                 </Reveal>
-              </p>
+              </div>
 
               <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
                 <button className="welcome-button">
